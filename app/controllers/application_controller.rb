@@ -24,7 +24,9 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/login' do
-
+    if !!session[:id]
+      redirect '/tweets'
+    end
   end
 
   post '/login' do
