@@ -21,6 +21,6 @@ class ApplicationController < Sinatra::Base
 
   post '/signup' do
 
-    redirects to '/tweets'
+    redirect'/tweets'
   end
 end
