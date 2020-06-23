@@ -14,7 +14,8 @@ class ApplicationController < Sinatra::Base
 
   get '/signup' do
     puts params
-    puts session[:id]
+    puts !!session[:id]
+
     if !!session[:id]
       redirct '/tweets'
     end
