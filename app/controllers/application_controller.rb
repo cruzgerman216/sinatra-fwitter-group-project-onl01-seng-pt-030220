@@ -24,6 +24,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/login' do
+    session[:id] = User.find_by(:username=>params[:username])
     if !!session[:id]
       redirect '/tweets'
     end
