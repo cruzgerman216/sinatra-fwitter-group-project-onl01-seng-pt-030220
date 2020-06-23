@@ -31,7 +31,7 @@ class ApplicationController < Sinatra::Base
 
   post '/login' do
     puts params
-    u = User.find_by(params[:username])
+    u = User.find_by(:username => params[:username])
     puts u
     redirect '/tweets'
   end
