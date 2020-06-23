@@ -14,6 +14,10 @@ class ApplicationController < Sinatra::Base
   get '/signup' do
   end
 
+  get '/tweets' do
+
+  end
+
   post '/signup' do
 
     redirects to '/'
