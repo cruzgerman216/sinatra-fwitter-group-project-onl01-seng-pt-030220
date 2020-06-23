@@ -7,4 +7,15 @@ class ApplicationController < Sinatra::Base
     set :views, 'app/views'
   end
 
+  get '/' do
+      "Welcome to Fwitter"
+  end
+
+  get '/signup' do
+  end
+
+  post '/signup' do
+
+    redirects to '/'
+  end
 end
