@@ -24,14 +24,14 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/login' do
-    session[:id] = User.find_by(:username=>params[:username]).id
+
     if !!session[:id]
       redirect '/tweets'
     end
   end
 
   post '/login' do
-
+session[:id] = User.find_by(:username=>params[:username]).id
     redirect '/tweets'
   end
   post '/signup' do
