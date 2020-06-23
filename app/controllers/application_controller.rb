@@ -29,7 +29,7 @@ class ApplicationController < Sinatra::Base
 
   post '/login' do
 
-    redirect 'tweets'
+    redirect '/tweets'
   end
   post '/signup' do
     if params[:username] == "" || params[:email] == "" || params[:password] == ""
